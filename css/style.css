@@ -1,0 +1,762 @@
+/* Basic page settings and fonts */
+body {
+    font-family: 'Cairo', 'sans-serif';
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+    color: #2d3436;
+}
+
+.custom-container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+/* Navigation bar style */
+.site-nav {
+    background-color: #00b894;
+    padding: 10px 0;
+    border-bottom: 4px solid #fdcb6e;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo-group {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-text {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    margin-left: 10px;
+
+}
+
+.dropdown-item:hover {
+    background-color: #00b894;
+    color: #ffffff ;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links > li {
+    position:relative;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+    /* Smooth effect when hovering with mouse */
+    transition: 0.3s;
+    display: block;
+    padding: 10px 0;
+}
+
+.nav-links a:hover {
+    color: #fdcb6e;
+}
+
+/* Dropdown menu for events links */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    display: none;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown-menu li a {
+    color: #2d3436;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #00b894;
+    color: #ffffff;
+}
+
+.nav-links li:hover .dropdown-menu {
+    display: block;
+}
+
+/*header with background image*/
+.hero-section {
+    background: rgba(0, 184, 148, 0.75) url('../img/hero.jpg');
+    /* Blend the green color with the background image */
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.hero-section h1 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* Style for category filter buttons */
+.cat-box {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.cat-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    margin: 5px;
+    background-color: #ffffff;
+    border: 2px solid #00b894;
+    color: #00b894;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 30px;
+    transition: 0.4s;
+}
+
+.cat-btn:hover {
+    background-color: #00b894;
+    color: #ffffff;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    border: 1px solid transparent; 
+}
+.cultural { 
+    background-color: #e1f5fe ;
+    color: #0288d1 ; 
+}
+
+.music { 
+    background-color: #f3e5f5 ; 
+    color: #7b1fa2 ; 
+}
+
+.sports { 
+    background-color: #e8f5e9 ; 
+    color: #388e3c ; 
+}
+/* Content Grid */
+.section-title {
+    border-left: 6px solid #ff7675;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Grid layout for event cards */
+/* Flexbox will wrap items on small screens */
+.events-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.event-item {
+    flex: 1;
+    min-width: 300px;
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-weight: 700;
+    color: #00b894;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+    color: #636e72;
+    margin-bottom: 20px;
+}
+
+.btn-details {
+    display: block;
+    background-color: #ff7675;
+    color: #ffffff;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 8px;
+}
+
+/*Footer design with my info*/
+.site-footer {
+    background-color: #00b894;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    margin-top: 60px;
+    border-top: 4px solid #fdcb6e;
+}
+
+.footer-highlight {
+    color: #fdcb6e;
+    font-weight: 700;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    opacity: 0.9;
+    margin-top: 15px;
+}
+
+/* Enhancement for the search section */
+.filter-wrapper {
+    background-color: #ffffff;
+    border-radius: 12px;
+    margin-top: -10px;
+}
+
+.form-label {
+    font-weight: bold;
+    color: #003366;
+}
+
+/* Ensure cards are aligned properly in the grid */
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    padding-bottom: 50px;
+}
+
+/* General Setup */
+* { box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; background-color: #f8fbf9; margin: 0; padding: 0; overflow-x: hidden; }
+
+/* Header & Large Logo */
+.main-header { background-color: #16a085; border-bottom: 4px solid #f39c12; padding: 15px 0; }
+.site-logo { height: 65px; width: auto; max-width: 100%; }
+.brand-name { color: white; font-weight: 700; font-size: 1.6rem; }
+
+/* Navigation Links */
+.navbar-nav .nav-link { color: white !important; font-weight: bold; margin: 0 10px; transition: 0.3s; }
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: #f1c40f !important; }
+
+/* Search Box */
+.search-box { border-radius: 15px; border-left: 6px solid #16a085; }
+.btn-teal { background-color: #16a085; color: white; border: none; }
+.btn-teal:hover { background-color: #148f77; }
+
+/* Card & Image Symmetry */
+.event-card { position: relative; border-radius: 20px; overflow: hidden; background: white; transition: 0.3s; }
+.img-container { position: relative; width: 100%; height: 350px; overflow: hidden; }
+.card-img-top { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+
+/* Overlay Hidden Default */
+.event-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(22, 160, 133, 0.9);
+    display: flex; align-items: center; justify-content: center;
+    opacity: 0; transition: 0.4s ease-in-out;
+}
+.overlay-content { color: white; text-align: center; transform: translateY(30px); transition: 0.4s; }
+
+/* Badge */
+.category-badge { position: absolute; top: 15px; left: 15px; z-index: 5; padding: 10px 20px; border-radius: 30px; }
+
+/* Hover Triggers */
+.event-card:hover .event-overlay { opacity: 1; }
+.event-card:hover .overlay-content { transform: translateY(0); }
+.event-card:hover .card-img-top { transform: scale(1.1); }
+
+/* Detail Buttons */
+.btn-yellow { background-color: #f1c40f; color: #2c3e50; border-radius: 30px; padding: 10px 30px; border: none; }
+.btn-yellow:hover { background-color: white; color: #16a085; }
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+    .site-logo { height: 50px; }
+    .brand-name { font-size: 1.3rem; }
+}
+@media (max-width: 768px) {
+    .img-container { height: 280px; }
+}
+
+/* Styling for the Navigation Bar based on your image */
+.site-nav {
+    background-color: #16a085 !important; /* The Green color from your image */
+    border-bottom: 5px solid #f1c40f !important; /* The Yellow Line you requested */
+    padding: 15px 0;
+}
+
+/* Make sure the text is Yellow and Bold */
+.brand-name {
+    color: #f1c40f !important; /* Bright Yellow */
+    font-weight: 700;
+    font-size: 1.6rem;
+}
+
+/* Styling the Links so they appear clearly */
+.nav-links .nav-link {
+    color: white !important; /* White links */
+    font-weight: bold;
+    margin-left: 20px;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+/* Hover effect: Turns yellow when you point at it */
+.nav-links .nav-link:hover, 
+.nav-links .nav-link.active {
+    color: #f1c40f !important; /* Yellow on hover */
+}
+
+/* 1. توحيد حجم الخط لجميع الروابط ومنع تغيرها عند الضغط */
+.nav-links .nav-link, 
+.nav-links .dropdown-toggle,
+.nav-links .nav-link.active,
+.nav-links .show > .nav-link {
+    font-size: 1.1rem !important; /* حجم ثابت للكل */
+    font-weight: 700 !important;   /* سماكة ثابتة للكل */
+    transition: none !important;  /* إلغاء أي حركة قد تسبب اهتزاز الخط */
+}
+
+/* 2. تنسيق خاص لرابط الـ Events المنسدل لضمان ثباته */
+.nav-item.dropdown .nav-link.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+/* 3. التأكد من أن الكلمات داخل القائمة المنسدلة نفسها حجمها مناسب */
+.custom-dropdown .dropdown-item {
+    font-size: 0.95rem !important; 
+    font-weight: 500 !important;
+}
+
+/* Page Details Specific Styling */
+.btn-teal { background-color: #16a085; color: white; border-radius: 8px; transition: 0.3s; }
+.btn-teal:hover { background-color: #148f77; color: #f1c40f; }
+
+.btn-outline-teal { border: 2px solid #16a085; color: #16a085; border-radius: 8px; transition: 0.3s; }
+.btn-outline-teal:hover { background-color: #16a085; color: white; }
+
+.border-yellow { border-color: #f1c40f !important; }
+
+.mini-gallery img { cursor: pointer; transition: 0.3s; }
+.mini-gallery img:hover { transform: scale(1.05); }
+
+/* General settings */
+body {
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header image display */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.event-header {
+    background: #ffffff;
+    padding: 50px 0;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 30px;
+}
+
+.event-header h1 {
+    color: #0d6efd;
+    font-size: 2.5rem;
+}
+
+.btn-sm {
+    margin: 5px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+#main-event-img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#event-desc {
+    line-height: 1.8;
+    text-align: justify;
+}
+
+#event-gallery img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+#event-gallery img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.sidebar-box {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #efefef;
+    position: sticky;
+    top: 20px;
+}
+
+#event-map-img {
+    width: 100%;
+    border-radius: 12px;
+    border: 2px solid #f1f1f1;
+    margin-top: 15px;
+    transition: opacity 0.3s;
+}
+
+#event-map-img:hover {
+    opacity: 0.9;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 30px 0;
+    background-color: #212529;
+    color: #ced4da;
+}
+
+@media (max-width: 768px) {
+    #main-event-img {
+        height: 250px;
+    }
+    
+    .event-header h1 {
+        font-size: 1.8rem;
+    }
+}
+/*about page*/
+
+/* Main Container for About */
+.abt-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Custom Hero for About */
+.about-hero-custom {
+    background: linear-gradient(rgba(0, 184, 148, 0.8), rgba(0, 184, 148, 0.8)), url('img/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    border-radius: 0 0 60px 60px;
+}
+
+.abt-main-title { font-size: 3rem; font-weight: 700; margin-bottom: 10px; }
+.abt-subtitle { font-size: 1.2rem; opacity: 0.9; }
+
+/* Grid for the 3 info items */
+.abt-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: -40px; 
+    justify-content: center;
+}
+
+.abt-info-item {
+    background: #fff;
+    flex: 1;
+    min-width: 280px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    border-top: 5px solid #00b894;
+    text-align: center;
+}
+
+.abt-green-head { color: #00b894; margin-bottom: 15px; font-weight: 700; }
+.abt-text { color: #636e72; font-size: 0.95rem; line-height: 1.6; }
+
+/* Team Section Styling */
+.abt-team-section { text-align: center; margin-top: 80px; }
+.abt-section-title { font-weight: 700; color: #2d3436; font-size: 2rem; }
+.abt-yellow-divider { width: 50px; height: 4px; background: #fdcb6e; margin: 15px auto; }
+
+.abt-team-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.abt-member { margin: 20px; text-align: center; }
+.abt-avatar {
+    width: 140px; height: 140px; border-radius: 50%;
+    border: 4px solid #00b894; object-fit: cover; margin-bottom: 15px;
+}
+.abt-name { font-weight: 700; margin-bottom: 5px; color: #2d3436; }
+.abt-role { color: #00b894; font-size: 0.9rem; font-weight: bold; }
+
+/* Policies Section */
+
+.policy-section-new {
+    background-color: #f1f2f6; 
+    padding: 60px 40px;
+    border-radius: 40px;
+    margin: 80px 0;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+}
+
+.policy-title-new {
+    color: #2d3436;
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.policy-line-divider {
+    width: 60px;
+    height: 5px;
+    background-color: #fdcb6e; 
+    margin: 0 auto 40px;
+    border-radius: 10px;
+}
+
+.policy-flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.policy-item-custom {
+    flex: 1;
+    min-width: 280px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: left; 
+    border-bottom: 4px solid #00b894; 
+    transition: 0.3s ease;
+}
+
+.policy-item-custom:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.policy-subtitle-green {
+    color: #00b894;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.policy-desc {
+    color: #636e72;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/*contact page*/
+/* Flexbox Layout */
+.con-main-wrapper { max-width: 1100px; margin: 50px auto; padding: 0 20px; }
+.con-flex-row { display: flex; flex-wrap: wrap; gap: 40px; }
+
+/* Info Side - Brand Green */
+.con-info-side {
+    flex: 1;
+    min-width: 280px;
+    background-color: #00b894;
+    color: white;
+    padding: 35px;
+    border-radius: 20px;
+}
+.con-label { color: #fdcb6e; font-weight: bold; display: block; margin-top: 15px; }
+.con-social-row a { 
+    color: white; background: #2d3436; padding: 6px 12px; 
+    border-radius: 8px; text-decoration: none; font-size: 0.75rem; margin-right: 5px;
+}
+
+/* Form Side - Clean White */
+.con-form-side {
+    flex: 2;
+    min-width: 320px;
+    background: white;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+.con-input-group { margin-bottom: 18px; }
+.con-input-group label { display: block; font-size: 0.8rem; font-weight: bold; margin-bottom: 6px; }
+.con-input-group input, .con-input-group textarea {
+    width: 100%; padding: 10px; border: 1.5px solid #eee; border-radius: 10px; outline: none;
+}
+.con-input-group input:focus { border-color: #00b894; }
+
+/* Button - Brand Yellow */
+.con-submit-btn {
+    width: 100%; background-color: #fdcb6e; color: #2d3436; 
+    border: none; padding: 14px; border-radius: 10px; font-weight: bold; cursor: pointer;
+}
+.con-submit-btn:hover { background-color: #f1c40f; }
+
+.gallery-thumb:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-color: #fdcb6e !important;
+}
+
+#event-gallery img {
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Simple Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+
+/*  Card Hover Lift Effect  */
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+/*  Details Button Glow Effect  */
+.btn-details {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-details:hover {
+    background-color: #0056b3; /* لون أزرق أغمق */
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.7);
+}
+
+/*  Page Entrance Animation  */
+body {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: pageFadeIn 0.7s ease-out forwards;
+}
+
+@keyframes pageFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/*   Image Color Overlay on Hover  */
+/* Make the hero section able to hold positioned elements */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Create the color overlay layer (initially transparent) */
+.hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* No color at first */
+    transition: background 0.4s ease; /* Smooth fade effect */
+    z-index: 1; /* Overlay stays above the image but below the text */
+}
+
+/* Change overlay color when hovering */
+.hero-section:hover::after {
+    background: rgba(0, 0, 0, 0.37);     
+}
+
+/*  Keep the text above the overlay  */
+/* Ensure the text is not affected by the overlay */
+.hero-section h1,
+.hero-section p {
+    position: relative;
+    z-index: 2; /* Text stays on top of everything */
+}

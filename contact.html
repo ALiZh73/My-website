@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make the website work on mobile screens-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrian Virtual University Events </title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+<!--Connect to my style file-->
+<link rel="stylesheet" href="css/style.css">
+<!-- css bootstrap link-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- the top menu (Navigation bar)-->
+
+    <nav class="navbar navbar-expand-lg site-nav">
+    <div class="custom-container nav-flex">
+        
+       <!--logo-->
+        <a href="index.html" class="nav-logo-group navbar-brand">
+            <img src="img/logo.png" alt="Logo" width="40">
+            <span class="logo-text"> SVU Events IN Damascus </span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Bootstrap) --> 
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <!-- Collapsible wrapper for the navigation links -->
+       <!-- The ID 'navbarNav' connects this container to the toggle button -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav-links navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <!-- Dropdown menu section -->
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="events.html" data-bs-toggle="dropdown">Events</a>
+                    <ul class="dropdown-menu">
+                       <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="event.html?id=Internationalfair">A Trip to the International Fair</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=AI">A Debate About the Impact of AI</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=OperaHouseNight">A Trip to the Opera House</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=music">Electronic Music Production Workshop</a></li>
+                        <li><a class="dropdown-item active-item" href="event.html?id=DamascusMarathon">Virtual University Marathon</a><
+                    </ul>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- Main Content Area -->
+    <div class="con-main-wrapper">
+        <div class="con-flex-row">
+            
+            <!-- Information Column -->
+            <div class="con-info-side">
+                <h3 class="con-side-title">Get in Touch</h3>
+                <p>Find us in the heart of Damascus.</p>
+                
+                <div class="con-detail-item">
+                    <span class="con-label">Email:</span>
+                    <p>info@svu-events.com</p>
+                </div>
+
+                <div class="con-detail-item">
+                    <span class="con-label">Follow Us:</span>
+                    <div class="con-social-row">
+                        <a href="https://facebook.com">Facebook</a>
+                        <a href="https://instagram.com">Instagram</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Column -->
+            <div class="con-form-side">
+                <h4 class="con-form-title">Send us a Message</h4>
+
+                <!-- Bootstrap Alerts controlled by JS -->
+                 <!-- Success Message: This div is hidden at first. JS will show it when everything is OK -->
+                <div id="alertSuccess" class="alert alert-success d-none">Thank you! Your message was sent.</div>
+                <!-- Error Message: This div shows up only if the user forgets to fill a field -->
+                <div id="alertError" class="alert alert-danger d-none">Please check your inputs!</div>
+
+                <form id="contactFormManual">
+                    <div class="con-input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="conUserName" placeholder="alaa Khatib">
+                    </div>
+                    <div class="con-input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="conUserEmail" placeholder="example@mail.com">
+                    </div>
+                    <div class="con-input-group">
+                        <label>Message Content</label>
+                        <textarea id="conUserMessage"  placeholder="How can we help?"></textarea>
+                    </div>
+                    <button type="submit" class="con-submit-btn">Send Message</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+  <!--Section withe site details and student info-->
+
+    <footer class="site-footer">
+        <div class="custom-container">
+            <p style="font-size: 18px; margin: 0;">Damascus Events Guide</p>
+            <p>Prepared by: <span class="footer-highlight">Naya Wael Moawad naya_285839 Ali Mouhanad zhour ali_283555  abrar Zohair Abass abrar_259255 Adnan Zohair Alhamoya adnan_285975</span> </p>
+            <p class="footer-copyright">
+                © 2026 Web Programming Course - Dr. Basil Al-Khatib
+            </p>
+        </div>
+    </footer>
+    <!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

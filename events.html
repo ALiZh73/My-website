@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Make the website responsive on all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Syrian Virtual University Events - Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Website Icon -->
+    <link rel="icon" type="image/png" href="img/logo.png">
+</head>
+
+<body>
+
+<!--  NAVIGATION BAR  -->
+<nav class="navbar navbar-expand-lg site-nav">
+    <div class="container">
+
+        <!-- Website Logo + Title -->
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <img src="img/logo.png" alt="Logo" width="45">
+            <span class="brand-name ms-3">SVU Event IN Damascus</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navigation Links -->
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav ms-auto nav-links align-items-center">
+
+                <!-- Home Link -->
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+
+                <!-- Events Dropdown Menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle active" id="eventsDrop" role="button" data-bs-toggle="dropdown">
+                        Events
+                    </a>
+
+                    <!-- Dropdown Items -->
+                    <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="event.html?id=Internationalfair">A Trip to the International Fair</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=AI">A Debate About the Impact of AI</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=OperaHouseNight">A Trip to the Opera House</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=music">Electronic Music Production Workshop</a></li>
+                        <li><a class="dropdown-item active-item" href="event.html?id=DamascusMarathon">Virtual University Marathon</a></li>
+                    </ul>
+                </li>
+
+                <!-- About + Contact -->
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--  MAIN CONTENT  -->
+<main class="container my-5">
+
+    <!-- Search Filters Section -->
+    <div class="search-box p-4 shadow-sm rounded-4 mb-5 bg-white">
+
+        <div class="row g-3">
+
+            <!-- Search by Name -->
+            <div class="col-md-3">
+                <label class="fw-bold small text-muted">Event Name</label>
+                <input type="text" id="nameSearch" class="form-control" placeholder="Search...">
+            </div>
+
+            <!-- Filter by Category -->
+            <div class="col-md-3">
+                <label class="fw-bold small text-muted">Category</label>
+                <select id="catSelect" class="form-select">
+                    <option value="all">All Categories</option>
+                    <option value="cultural">Cultural</option>
+                    <option value="music">Music</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
+
+            <!-- Filter by Date -->
+            <div class="col-md-3">
+                <label class="fw-bold small text-muted">Date</label>
+                <input type="date" id="dateSearch" class="form-control">
+            </div>
+
+            <!-- Apply Filters Button -->
+            <div class="col-md-3 d-flex align-items-end">
+                <button class="btn btn-teal w-100 fw-bold py-2" onclick="applyFilter()">Apply Filters</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!--  EVENTS GRID  -->
+    <div class="row g-4" id="eventsContainer">
+
+        <!-- Each event card is wrapped inside a Bootstrap column -->
+        <!-- Event 1 -->
+        <div class="col-md-6 col-lg-4 event-item" data-cat="cultural" data-date="2026-08-15">
+            <div class="card h-100 event-card border-0 shadow-sm">
+
+                <!-- Image + Overlay -->
+                <div class="img-container">
+                    <img src="img/fair1.jpg" class="card-img-top" alt="Damascus International Fair">
+
+                    <!-- Category Badge -->
+                    <span class="badge bg-primary category-badge">Cultural</span>
+
+                    <!-- Hover Overlay -->
+                    <div class="event-overlay">
+                        <div class="overlay-content p-3">
+                            <h4 class="fw-bold">A Trip to the International Fair</h4>
+                            <p class="small text-light">The largest economic and cultural event in Syria.</p>
+                            <p class="small mb-1 text-warning">📅 2026-08-15 | 📍 Fairgrounds</p>
+
+                            <!-- Details Button -->
+                            <a href="event.html?id=Internationalfair" class="btn btn-yellow fw-bold mt-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="col-md-6 col-lg-4 event-item" data-cat="cultural" data-date="2026-09-05">
+            <div class="card h-100 event-card border-0 shadow-sm">
+                <div class="img-container">
+                    <img src="img/AI.jpg" class="card-img-top" alt="AI Debate">
+                    <span class="badge bg-primary category-badge">Cultural</span>
+
+                    <div class="event-overlay">
+                        <div class="overlay-content p-3">
+                            <h4 class="fw-bold">A Debate About the Impact of AI</h4>
+                            <p class="small text-light">How AI is changing our lives.</p>
+                            <p class="small mb-1 text-warning">📅 2026-09-05 | 📍 Library</p>
+                            <a href="event.html?id=AI" class="btn btn-yellow fw-bold mt-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="col-md-6 col-lg-4 event-item" data-cat="music" data-date="2026-06-10">
+            <div class="card h-100 event-card border-0 shadow-sm">
+                <div class="img-container">
+                    <img src="img/opera.jpg" class="card-img-top" alt="Opera House">
+                    <span class="badge bg-success category-badge">Music</span>
+
+                    <div class="event-overlay">
+                        <div class="overlay-content p-3">
+                            <h4 class="fw-bold">A Trip to the Opera House</h4>
+                            <p class="small text-light">An enchanting classical music evening.</p>
+                            <p class="small mb-1 text-warning">📅 2026-06-10 | 📍 Opera House</p>
+                            <a href="event.html?id=OperaHouseNight" class="btn btn-yellow fw-bold mt-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="col-md-6 col-lg-4 event-item" data-cat="music" data-date="2026-07-20">
+            <div class="card h-100 event-card border-0 shadow-sm">
+                <div class="img-container">
+                    <img src="img/music.jpg" class="card-img-top" alt="Music Workshop">
+                    <span class="badge bg-success category-badge">Music</span>
+
+                    <div class="event-overlay">
+                        <div class="overlay-content p-3">
+                            <h4 class="fw-bold">Electronic Music Production Workshop</h4>
+                            <p class="small text-light">From code to beat — electronic music production.</p>
+                            <p class="small mb-1 text-warning">📅 2026-07-20 | 📍 Stadium</p>
+                            <a href="event.html?id=music" class="btn btn-yellow fw-bold mt-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="col-md-6 col-lg-4 event-item" data-cat="sports" data-date="2026-10-10">
+            <div class="card h-100 event-card border-0 shadow-sm">
+                <div class="img-container">
+                    <img src="img/marathon.jpg" class="card-img-top" alt="Marathon">
+                    <span class="badge bg-danger category-badge">Sports</span>
+
+                    <div class="event-overlay">
+                        <div class="overlay-content p-3">
+                            <h4 class="fw-bold">Virtual University Marathon</h4>
+                            <p class="small text-light">The largest sporting event for students.</p>
+                            <p class="small mb-1 text-warning">📅 2026-10-10 | 📍 City Center</p>
+                            <a href="event.html?id=DamascusMarathon" class="btn btn-yellow fw-bold mt-2">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<!--  FOOTER  -->
+<footer class="site-footer">
+    <div class="custom-container">
+        <p style="font-size: 18px; margin: 0;">Damascus Events Guide</p>
+
+        <!-- Student Names -->
+        <p>Prepared by:
+            <span class="footer-highlight">
+                Naya Wael Moawad naya_285839 |
+                Ali Mouhanad Zhour ali_283555 |
+                Abrar Zohair Abass abrar_259255 |
+                Adnan Zohair Alhamoya adnan_285975
+            </span>
+        </p>
+
+        <p class="footer-copyright">
+            © 2026 Web Programming Course - Dr. Basil Al-Khatib
+        </p>
+    </div>
+</footer>
+
+<!-- Custom JS -->
+<script src="js/main.js"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

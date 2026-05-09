@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make the website work on mobile screens-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrian Virtual University Events </title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+<!--Connect to my style file-->
+<link rel="stylesheet" href="css/style.css">
+<!-- css bootstrap link-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- the top menu (Navigation bar)-->
+
+    <nav class="navbar navbar-expand-lg site-nav">
+    <div class="custom-container nav-flex">
+        
+       <!--logo-->
+        <a href="index.html" class="nav-logo-group navbar-brand">
+            <img src="img/logo.png" alt="Logo" width="40">
+            <span class="logo-text">SVU Events IN Damascus</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Bootstrap) --> 
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <!-- Collapsible wrapper for the navigation links -->
+       <!-- The ID 'navbarNav' connects this container to the toggle button -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav-links navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <!-- Dropdown menu section -->
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="#" data-bs-toggle="dropdown">Events</a>
+                    <ul class="dropdown-menu">
+                         <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="event.html?id=Internationalfair">A Trip to the International Fair</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=AI">A Debate About the Impact of AI</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=OperaHouseNight">A Trip to the Opera House</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=music">Electronic Music Production Workshop</a></li>
+                        <li><a class="dropdown-item active-item" href="event.html?id=DamascusMarathon">Virtual University Marathon</a><
+                    </ul>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+<!-- Header Section -->
+    <header class="about-hero-custom">
+        <div class="abt-container">
+            <h1 class="abt-main-title">About Our Project</h1>
+            <p class="abt-subtitle">Discover the beauty and events of the oldest inhabited city</p>
+        </div>
+    </header>
+
+    <main class="abt-container">
+        <!-- Info Cards Grid -->
+        <div class="abt-grid">
+            <div class="abt-info-item">
+                <h3 class="abt-green-head">Our Goal</h3>
+                <p class="abt-text">We aim to create a complete archive for every cultural event in Damascus city.</p>
+            </div>
+            <div class="abt-info-item">
+                <h3 class="abt-green-head">Our Vision</h3>
+                <p class="abt-text">To be the first digital destination for tourists and locals to find entertainment.</p>
+            </div>
+            <div class="abt-info-item">
+                <h3 class="abt-green-head">Our Mission</h3>
+                <p class="abt-text">Helping small businesses and artists to promote their work professionally.</p>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <section class="abt-team-section">
+            <h2 class="abt-section-title">The Creative Team</h2>
+            <div class="abt-yellow-divider"></div>
+            
+            <div class="abt-team-grid">
+                <div class="abt-member">
+                    <img src="img/about1.jpg" class="abt-avatar" alt="Team Member">
+                    <h4 class="abt-name">Nour Fares</h4>
+                    <span class="abt-role">UI/UX Designer</span>
+                </div>
+                <div class="abt-member">
+                    <img src="img/about2.jpg" class="abt-avatar" alt="Team Member">
+                    <h4 class="abt-name">Rami Hassan</h4>
+                    <span class="abt-role">Web Developer</span>
+                </div>
+                <div class="abt-member">
+                    <img src="img/about3.jpg" class="abt-avatar" alt="Team Member">
+                    <h4 class="abt-name">Layla Ahmad</h4>
+                    <span class="abt-role">Content Manager</span>
+                </div>
+            </div>
+        </section>
+
+     <!-- Section: Site Policies with New Colors -->
+<section class="policy-section-new">
+    <h2 class="policy-title-new">Our Platform Policies</h2>
+    <div class="policy-line-divider"></div>
+    
+    <div class="policy-flex-container">
+        <div class="policy-item-custom">
+            <h5 class="policy-subtitle-green">Event Verification</h5>
+            <p class="policy-desc">We manually check every event detail to ensure 100% accuracy for our Damascus visitors.</p>
+        </div>
+        <div class="policy-item-custom">
+            <h5 class="policy-subtitle-green">Data Privacy</h5>
+            <p class="policy-desc">Your personal information is encrypted and protected according to international security standards.</p>
+        </div>
+        <div class="policy-item-custom">
+            <h5 class="policy-subtitle-green">Community Respect</h5>
+            <p class="policy-desc">Our platform supports events that celebrate the diverse culture and history of our city.</p>
+        </div>
+    </div>
+</section>
+     <!--Section withe site details and student info-->
+
+    <footer class="site-footer">
+        <div class="custom-container">
+            <p style="font-size: 18px; margin: 0;">Damascus Events Guide</p>
+            <p>Prepared by: <span class="footer-highlight">Naya Wael Moawad naya_285839 Ali Mouhanad zhour ali_283555  abrar Zohair Abass abrar_259255 Adnan Zohair Alhamoya adnan_285975</span> </p>
+            <p class="footer-copyright">
+                © 2026 Web Programming Course - Dr. Basil Al-Khatib
+            </p>
+        </div>
+    </footer>
+    <!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

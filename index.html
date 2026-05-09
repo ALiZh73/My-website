@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- make the website work on mobile screens-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrian Virtual University Events - Final Project</title>
+    <link rel="icon" type="image/png" href="img/logo.png">
+<!--Connect to my style file-->
+<link rel="stylesheet" href="css/style.css">
+<!-- css bootstrap link-->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- the top menu (Navigation bar)-->
+
+    <nav class="navbar navbar-expand-lg site-nav">
+    <div class="custom-container nav-flex">
+        
+       <!--logo-->
+        <a href="index.html" class="nav-logo-group navbar-brand">
+            <img src="img/logo.png" alt="Logo" width="40">
+            <span class="logo-text"> SVU Events IN Damascus </span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button (Bootstrap) --> 
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+       <!-- Collapsible wrapper for the navigation links -->
+       <!-- The ID 'navbarNav' connects this container to the toggle button -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="nav-links navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <!-- Dropdown menu section -->
+                <li class="nav-item dropdown">
+                    <a class="dropdown-toggle" href="events.html?category=Events"  data-bs-toggle="nav-link dropdown-toggle">Events</a>
+                    <ul class="dropdown-menu">
+                          <ul class="dropdown-menu custom-dropdown">
+                        <li><a class="dropdown-item" href="event.html?id=Internationalfair">A Trip to the International Fair</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=AI">A Debate About the Impact of AI</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=OperaHouseNight">A Trip to the Opera House</a></li>
+                        <li><a class="dropdown-item" href="event.html?id=music">Electronic Music Production Workshop</a></li>
+                        <li><a class="dropdown-item active-item" href="event.html?id=DamascusMarathon">Virtual University Marathon</a>
+                    </ul>
+                    </ul>
+                </li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+    <div class="custom-container">
+        <!--header with a background picture-->
+
+        <header class="hero-section">
+            <h1>Experience Damascus</h1>
+            <p>The most vibrant events in the heart of the city</p>
+        </header>
+        <!--Buttons to filter events by category-->
+
+        <div class="cat-box">
+            <a href="events.html?filter=cultural" class="cat-btn">Cultural</a>
+            <a href="events.html?filter=music" class="cat-btn">Music</a>
+            <a href="events.html?filter=sports" class="cat-btn">Sports</a>
+        </div>
+
+        <h3 class="section-title">Featured This Week</h3>
+        <!--Start of the events area with 3 cards-->
+
+        <div class="events-grid">
+            <div class="event-item">
+                <div class="event-card">
+                    <img src="img/event.jpg" alt="Fair" class="card-img">
+                    <div class="card-body">
+                    <span class="category-badge cultural">Cultural</span>                        <div class="card-title">A Trip For THE Damascus International Fair</div>
+                        <p class="card-text">Explore the history and trade of the oldest fair in the region.</p>
+                        <a href="event.html?id=Internationalfair" class="btn-details">Details</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-card">
+                    <img src="img/opera.jpg" alt="Opera" class="card-img">
+                    <div class="card-body">
+                    <span class="category-badge music">Music</span>                        <div class="card-title"> A Trip For The Opera House </div>
+                        <p class="card-text">Enjoy a night of classical melodies and professional arts.</p>
+                        <a href="event.html?id=OperaHouseNight" class="btn-details">Details</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-item">
+                <div class="event-card">
+                    <img src="img/marathon.jpg" alt="Marathon" class="card-img">
+                    <div class="card-body">
+                        <span class="category-badge sports">Sports</span>
+                        <div class="card-title">Virtual University Marathon</div>
+                        <p class="card-text">Participate in the biggest annual running event in the city.</p>
+                        <a href="event.html?id=DamascusMarathon" class="btn-details">Details</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Section withe site details and student info-->
+
+    <footer class="site-footer">
+        <div class="custom-container">
+            <p style="font-size: 18px; margin: 0;">Damascus Events Guide</p>
+            <p>Prepared by: <span class="footer-highlight">Naya Wael Moawad naya_285839 Ali Mouhanad zhour ali_283555 abrar Zohair Abass abrar_259255 Adnan Zohair Alhamoya adnan_285975 </span> </p>
+            <p class="footer-copyright">
+                © 2026 Web Programming Course - Dr. Basil Al-Khatib
+            </p>
+        </div>
+    </footer>
+    <!-- JS Bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
